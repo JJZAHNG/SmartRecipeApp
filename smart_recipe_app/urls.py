@@ -13,9 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# smart_recipe_app/urls.py
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include  # 确保引入了include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/users/', include('users.urls')),  # 添加这一行来包括用户应用的URLs
 ]

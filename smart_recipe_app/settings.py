@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -86,7 +87,6 @@ DATABASES = {
         'OPTIONS':{
             "init_command":"SET sql_mode='STRICT_TRANS_TABLES'"
         }
-
     }
 }
 
